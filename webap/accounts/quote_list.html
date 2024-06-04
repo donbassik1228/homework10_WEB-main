@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quotes List</title>
+</head>
+<body>
+    <h1>Quotes List</h1>
+    <ul>
+        {% for quote in quotes %}
+            <li><a href="{% url 'quote_detail' quote.pk %}">{{ quote.text }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
